@@ -8,3 +8,19 @@ Class Warrior extends Character
 End Class
 */
 
+const { Character } = require("./character")
+
+class Warrior extends Character {
+    constructor() {
+        // Set specific values for Warrior's strength and weakness
+        const strengthValue = 45;
+        const weaknessValue = 35;
+        super(strengthValue, weaknessValue)
+    }
+
+    getDetails() {
+        return `Warrior with fighting strength of ${this.strength} and secrecy weakness of ${this.weakness}. Total Hit Value: ${this.totalHits}`
+    }
+}
+
+module.exports = { Warrior }
